@@ -1,0 +1,143 @@
+# =============================================================================
+# SHELLO CLI USER SETTINGS
+# =============================================================================
+# Edit this file to customize your settings.
+# Only specify values you want to override - defaults are used for the rest.
+# See: https://github.com/om-mapari/shello-cli for documentation
+
+# =============================================================================
+# PROVIDER CONFIGURATION
+# =============================================================================
+# Active provider: openai, bedrock
+provider: bedrock
+
+# -----------------------------------------------------------------------------
+# OpenAI-compatible API
+# -----------------------------------------------------------------------------
+openai_config:
+    provider_type: openai
+    api_key: "YOUR_OPENROUTER_API_KEY"
+    base_url: https://openrouter.ai/api/v1
+    default_model: z-ai/glm-4.5-air:free
+    models:
+        - anthropic/claude-3.5-sonnet
+        - anthropic/claude-3-opus
+        - gpt-4o
+
+# -----------------------------------------------------------------------------
+# AWS Bedrock (uncomment to configure)
+# -----------------------------------------------------------------------------
+bedrock_config:
+    provider_type: bedrock
+    aws_region: ap-south-1
+    aws_profile: devom
+    default_model: arn:aws:bedrock:ap-south-1:268035794270:inference-profile/global.anthropic.claude-sonnet-4-6
+    models:
+        - arn:aws:bedrock:ap-south-1:268035794270:inference-profile/global.anthropic.claude-haiku-4-5-20251001-v1:0
+        - arn:aws:bedrock:ap-south-1:268035794270:inference-profile/global.anthropic.claude-sonnet-4-5-20250929-v1:0
+        - arn:aws:bedrock:ap-south-1:268035794270:inference-profile/global.anthropic.claude-sonnet-4-6
+
+# -----------------------------------------------------------------------------
+# Remote Server
+# -----------------------------------------------------------------------------
+remote_server:
+    host: 13.126.25.225
+    port: 22
+    username: ec2user
+    password: YOUR_SERVER_PASSWORD
+
+# mcp_servers:
+#   chrome-devtools:
+#     command: "npx"
+#     args: ["-y", "chrome-devtools-mcp"]
+
+# -----------------------------------------------------------------------------
+# Google Gemini (uncomment to configure)
+# -----------------------------------------------------------------------------
+# gemini_config:
+#   provider_type: gemini
+#   api_key: your-api-key-here  # Or use GEMINI_API_KEY env var
+#   default_model: gemini-pro
+#   models:
+#     - gemini-pro
+#     - gemini-pro-vision
+
+# -----------------------------------------------------------------------------
+# Google Vertex AI (uncomment to configure)
+# -----------------------------------------------------------------------------
+# vertex_config:
+#   provider_type: vertex
+#   # Requires gcloud authentication
+#   default_model: gemini-pro
+#   models:
+#     - gemini-pro
+
+# =============================================================================
+# OUTPUT MANAGEMENT (optional - uses defaults if not specified)
+# =============================================================================
+# Controls how command output is truncated and displayed.
+# Uncomment and modify to customize:
+#
+# output_management:
+#   enabled: true
+#   show_summary: true
+#   limits:                    # Character limits per output type
+#     list: 5000               # ~1.2K tokens
+#     search: 10000            # ~2.5K tokens
+#     log: 15000               # ~3.7K tokens
+#     json: 20000              # ~5K tokens
+#     default: 8000            # ~2K tokens
+#   strategies:                # Truncation strategies
+#     list: first_only
+#     search: first_only
+#     log: last_only
+#     default: first_last
+#   first_ratio: 0.6           # For first_last strategy
+#   last_ratio: 0.4
+#   cache_max_size_mb: 100
+
+# =============================================================================
+# COMMAND TRUST (optional - uses defaults if not specified)
+# =============================================================================
+# Controls which commands require approval before execution.
+# Uncomment and modify to customize:
+#
+command_trust:
+    enabled: true
+    yolo_mode: false
+    approval_mode: ai_driven
+    allowlist:
+        - ls
+        - pwd
+        - git status
+    denylist:
+        - rm -rf /
+        - rm -rf /*
+        - rm -rf ~
+        - rm -rf ~/*
+        - dd if=/dev/zero*
+        - dd if=*of=/dev/sd*
+        - mkfs*
+        - format*
+        - "> /dev/sd*"
+        - chmod -R 777 /
+        - chown -R * /
+        - "> /dev/sda"
+        - "> /dev/null &"
+
+# =============================================================================
+# UPDATE CONFIGURATION (optional - uses defaults if not specified)
+# =============================================================================
+# Controls automatic update checking behavior.
+# Uncomment and modify to customize:
+#
+update_config:
+    check_on_startup: true
+# =============================================================================
+# SESSION HISTORY (optional - uses defaults if not specified)
+# =============================================================================
+# Controls session recording and storage.
+#
+# session_history:
+#   enabled: true              # Set false to disable session recording
+#   max_storage_mb: 50         # Maximum disk space for session files
