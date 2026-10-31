@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PluginConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CustomJavaScripts>
+    <CustomJavaScriptEntry>
+      <Name>Hide Player Controls (G Key)</Name>
+      <Script>(function () {
+    "use strict";
+
+    const style = document.createElement("style");
+    style.id = "jf-hide-controls-style";
+    style.textContent = `
+        .jf-hide-controls .skinHeader,
+        .jf-hide-controls .osdHeader,
+        .jf-hide-controls #videoOsdPage,
+        .jf-hide-controls .videoOsdBottom,
+        .jf-hide-controls .osdControls,
+        .jf-hide-controls #pause-screen-overlay,
+        .jf-hide-controls .upNextContainer,
+        .jf-hide-controls .jfQueuePanel,
+        .jf-hide-controls .appfooter,
+        .jf-hide-controls .docspinner,
+        .jf-hide-controls .subtitleSync {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+        }
+    `;
+    document.head.appendChild(style);
+
+    document.addEventListener("keydown", function (e) {
+        if (e.target &amp;&amp; e.target.tagName &amp;&amp; ["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName)) return;
+        if (e.target &amp;&amp; e.target.isContentEditable) return;
+
+        if (e.key &amp;&amp; e.key.toLowerCase() === "g") {
+            document.body.classList.toggle("jf-hide-controls");
+        }
+    });
+})();</Script>
+      <Enabled>true</Enabled>
+      <RequiresAuthentication>false</RequiresAuthentication>
+    </CustomJavaScriptEntry>
+  </CustomJavaScripts>
+  <PluginJavaScripts />
+  <DisableScriptInjectionMiddleware>false</DisableScriptInjectionMiddleware>
+</PluginConfiguration>

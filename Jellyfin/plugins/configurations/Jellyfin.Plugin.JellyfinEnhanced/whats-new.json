@@ -1,0 +1,30 @@
+{
+  "PluginVersion": "12.14.0.0",
+  "NewSettings": {
+    "languageTagsMergeRegions": "12.13.0.0",
+    "tagCacheExcludeLibraries": "12.12.0.0",
+    "tagStylesEnabled": "12.12.0.0",
+    "tagStyleTarget": "12.12.0.0",
+    "tagStyleResetAll": "12.12.0.0",
+    "spoilerBlurTrickplay": "12.13.0.0",
+    "doesTheDogDieEnabled": "12.13.0.0",
+    "doesTheDogDieApiKey": "12.13.0.0",
+    "mdblistCommunityRatingSource": "12.12.0.0",
+    "mdblistCommunityRatingFallbackSource": "12.12.0.0",
+    "mdblistCriticRatingSource": "12.12.0.0",
+    "mdblistCriticRatingFallbackSource": "12.12.0.0",
+    "activityFeedOwnOnlyForNonAdmins": "12.13.0.0",
+    "catchUpEnabled": "12.12.0.0",
+    "catchUpLogEnabled": "12.12.0.0",
+    "catchUpUseNativeTab": "12.12.0.0",
+    "catchUpUsePluginPages": "12.12.0.0",
+    "catchUpUseCustomTabs": "12.12.0.0",
+    "catchUpAutoCreateCustomTab": "12.12.0.0",
+    "jellyseerrSingleSeasonRequestOnly": "12.13.0.0",
+    "ElsewhereSeasonProviders": "12.12.0.0",
+    "showAnilistReviews": "12.13.0.0",
+    "reviewTranslationEnabled": "12.14.0.0",
+    "reviewTranslationUrl": "12.14.0.0",
+    "reviewTranslationApiKey": "12.14.0.0"
+  }
+}
