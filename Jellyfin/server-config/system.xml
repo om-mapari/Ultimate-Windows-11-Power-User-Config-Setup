@@ -132,7 +132,7 @@
     </MetadataOptions>
   </MetadataOptions>
   <SkipDeserializationForBasicTypes>true</SkipDeserializationForBasicTypes>
-  <ServerName>Om's Netflix</ServerName>
+  <ServerName>Omiflix</ServerName>
   <UICulture>en-US</UICulture>
   <SaveMetadataHidden>false</SaveMetadataHidden>
   <ContentTypes />
@@ -166,6 +166,11 @@
     <RepositoryInfo>
       <Name>JavaScript Injector</Name>
       <Url>https://raw.githubusercontent.com/n00bcodr/jellyfin-plugins/main/12/manifest.json            </Url>
+      <Enabled>true</Enabled>
+    </RepositoryInfo>
+    <RepositoryInfo>
+      <Name>Netflix Theme</Name>
+      <Url>https://raw.githubusercontent.com/Kuschel-code/Jellyfin-Custom-Theme/main/manifest.json</Url>
       <Enabled>true</Enabled>
     </RepositoryInfo>
   </PluginRepositories>

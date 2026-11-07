@@ -13,7 +13,7 @@
   <MaintenanceScheduleMessage>The library is updating; slowdowns are normal. Time remaining: {countdown}</MaintenanceScheduleMessage>
   <MaintenanceScheduleNotificationMessage>The library is updating; slowdowns are normal.</MaintenanceScheduleNotificationMessage>
   <MaintenanceScheduleAction>none</MaintenanceScheduleAction>
-  <ToastDuration>1500</ToastDuration>
+  <ToastDuration>0</ToastDuration>
   <HelpPanelAutocloseDelay>15000</HelpPanelAutocloseDelay>
   <EnableCustomSplashScreen>false</EnableCustomSplashScreen>
   <SplashScreenImageUrl>/web/assets/img/banner-light.png</SplashScreenImageUrl>
@@ -29,7 +29,7 @@
   <ElsewhereCustomBrandingText />
   <ElsewhereCustomBrandingImageUrl />
   <ClearLocalStorageTimestamp>0</ClearLocalStorageTimestamp>
-  <ClearTranslationCacheTimestamp>1793445539645</ClearTranslationCacheTimestamp>
+  <ClearTranslationCacheTimestamp>1793985244907</ClearTranslationCacheTimestamp>
   <AutoPauseEnabled>false</AutoPauseEnabled>
   <AutoResumeEnabled>false</AutoResumeEnabled>
   <AutoPipEnabled>false</AutoPipEnabled>
@@ -78,6 +78,12 @@
   <ShowUserRatingDash>true</ShowUserRatingDash>
   <Shortcuts>
     <Shortcut>
+      <Name>ResetPlaybackSpeed</Name>
+      <Key>R</Key>
+      <Label>Reset Playback Speed</Label>
+      <Category>Player</Category>
+    </Shortcut>
+    <Shortcut>
       <Name>OpenSearch</Name>
       <Key>/</Key>
       <Label>Open Search</Label>
@@ -121,7 +127,7 @@
     </Shortcut>
     <Shortcut>
       <Name>SubtitleMenu</Name>
-      <Key>C</Key>
+      <Key>S</Key>
       <Label>Subtitle Menu</Label>
       <Category>Player</Category>
     </Shortcut>
@@ -147,12 +153,6 @@
       <Name>DecreasePlaybackSpeed</Name>
       <Key>-</Key>
       <Label>Decrease Playback Speed</Label>
-      <Category>Player</Category>
-    </Shortcut>
-    <Shortcut>
-      <Name>ResetPlaybackSpeed</Name>
-      <Key>R</Key>
-      <Label>Reset Playback Speed</Label>
       <Category>Player</Category>
     </Shortcut>
     <Shortcut>
